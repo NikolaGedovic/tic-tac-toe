@@ -6,7 +6,8 @@
   --index-btn-color: #E8751A;
   --index-btn-hover: #b95515;
   --index-btn-active: #ee8921;
-  --game-board: #97bdc9;
+  --game-board-btn: #97bdc9;
+  --score-game-btn-font: #1c2930;
 
   /* fonts */
   --start-btn: "Seymour One", sans-serif;
@@ -78,7 +79,7 @@ body {
 .user-label-character {
   font-size: 2.5rem;
   font-family: var(--X-O);
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .start-btn {
@@ -96,7 +97,7 @@ body {
 
 .start-btn:hover {
   background-color: var(--index-btn-hover);
-  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
   transform: scale(1.05);
 }
 
@@ -143,7 +144,7 @@ body {
   justify-content: center;
   font-size: 5rem;
   font-weight: 500;
-  color: var(--font-color);
+  color: var(--score-game-btn-font);
 }
 
 /* Game Board */
@@ -161,44 +162,76 @@ body {
   align-items: center;
   font-family: var(--X-O);
   font-size: 10rem;
+  font-weight: 800;
   border: none;
 }
 
 .square-1 {
-  border-right: 8px solid var(--game-board);
-  border-bottom: 8px solid var(--game-board);
+  border-right: 8px solid var(--game-board-btn);
+  border-bottom: 8px solid var(--game-board-btn);
 }
 
 .square-2 {
-  border-right: 8px solid var(--game-board);
-  border-bottom: 8px solid var(--game-board);
+  border-right: 8px solid var(--game-board-btn);
+  border-bottom: 8px solid var(--game-board-btn);
 }
 
 .square-3 {
-  border-bottom: 8px solid var(--game-board);
+  border-bottom: 8px solid var(--game-board-btn);
 }
 
 .square-4 {
-  border-right: 8px solid var(--game-board);
-  border-bottom: 8px solid var(--game-board);
+  border-right: 8px solid var(--game-board-btn);
+  border-bottom: 8px solid var(--game-board-btn);
 }
 
 .square-5 {
-  border-bottom: 8px solid var(--game-board);
-  border-right: 8px solid var(--game-board);
+  border-bottom: 8px solid var(--game-board-btn);
+  border-right: 8px solid var(--game-board-btn);
 }
 
 .square-6 {
-  border-bottom: 8px solid var(--game-board);
+  border-bottom: 8px solid var(--game-board-btn);
 }
 
 .square-7 {
-  border-right: 8px solid var(--game-board);
+  border-right: 8px solid var(--game-board-btn);
 }
 
 .square-8 {
-  border-right: 8px solid var(--game-board);
+  border-right: 8px solid var(--game-board-btn);
 }
+
+/* Game Buttons */
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.game-btn {
+  border: none;
+  width: 10rem;
+  padding: .85rem 0;
+  margin-bottom: 2rem;
+  font-size: 1.22rem;
+  border-radius: .5rem;
+  background-color: var(--game-board-btn);
+  color: var(--score-game-btn-font);
+  cursor: pointer;
+  transition: all .12s ease-in-out;
+}
+
+.game-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  transform: scale(1.05);
+}
+
+.game-btn:active {
+  background-color: var(--score-game-btn-font);
+  color: var(--font-color);
+}
+
 
 /********* Footer *********/
 .footer {
