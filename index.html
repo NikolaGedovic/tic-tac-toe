@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Title -->
+    <title>Tic Tac Toe</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Pacifico&family=Rubik:ital,wght@0,300..900;1,300..900&family=Seymour+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class="main-heading">Tic Tac Toe</h1>
+    <div class="register">
+      <form action="#" class="form">
+        <div class="player-1-input input-container">
+          <input
+            class="user-input"
+            type="text"
+            id="player-1"
+            placeholder="Enter Name..."
+            required
+          />
+          <label class="input-label" for="player-1"
+            >Player <span class="user-label-character">X</span></label
+          >
+        </div>
+        <div class="player-2-input input-container">
+          <input
+            class="user-input"
+            type="text"
+            id="player-2"
+            placeholder="Enter Name..."
+            required
+          />
+          <label class="input-label" for="player-2"
+            >Player <span class="user-label-character">O</span></label
+          >
+        </div>
+        <button class="start-btn">Start</button>
+      </form>
+    </div>
+    <footer class="footer">
+      <div class="footer-text">
+        <a
+          class="footer-link"
+          href="https://github.com/NikolaGedovic"
+          target="_blank"
+        >
+          Nikola Gedović
+          <i class="bx bxl-github footer-icon"></i>
+        </a>
+      </div>
+    </footer>
+    <!-- Script -->
+    <script src="script.js"></script>
+  </body>
+</html>

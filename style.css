@@ -1,0 +1,122 @@
+:root {
+  --bg-color: #344955;
+  --font-color: #FFF7FC;
+  --players: #B5C0D0;
+  --index-btn-color: #E8751A;
+  --index-btn-hover: #b95515;
+  --index-btn-active: #ee8921;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* INDEX.HTML Styling */
+.main-heading {
+  color: var(--font-color);
+  font-size: 4rem;
+  font-family: "Bungee", sans-serif;
+}
+
+.register {
+  margin-bottom: 12.5rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.user-input {
+  width: 15rem;
+  height: 2.3rem;
+  font-size: .97rem;
+  border-radius: .3rem;
+  border: none;
+  padding-left: .3rem;
+  background-color: var(--players);
+}
+
+.user-input::placeholder {
+  font-size: .95rem;
+}
+
+.input-label {
+  color: var(--players);
+  font-size: 2rem;
+  font-family: "Pacifico", sans-serif;
+}
+
+.user-label-character {
+  font-size: 2.5rem;
+  font-family: "Bungee";
+  font-weight: bold;
+}
+
+.start-btn {
+  padding: 1.25rem 3.13rem;
+  border: none;
+  border-radius: .5rem;
+  margin-top: 2rem;
+  font-family: "Seymour One", sans-serif;
+  font-size: 1.5rem;
+  background-color: #E8751A;
+  cursor: pointer;
+  transition: all .15s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+
+.start-btn:hover {
+  background-color: var(--index-btn-hover);
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+  transform: scale(1.05);
+}
+
+.start-btn:active {
+  background-color: var(--index-btn-active);
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: .5rem 0;
+}
+
+.footer-link {
+  color: black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.15rem;
+  transition: .15s ease-in;
+}
+
+.footer-link:hover {
+  transform: scale(1.08);
+}
