@@ -5,12 +5,14 @@
   --index-btn-color: #E8751A;
   --index-btn-hover: #b95515;
   --index-btn-active: #ee8921;
+  --game-board: #97bdc9;
 }
 
 * {
   margin: 0;
   padding: 0;
   font-family: "Rubik", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -23,7 +25,7 @@ body {
   align-items: center;
 }
 
-/* INDEX.HTML Styling */
+/************ INDEX.HTML Styling ************/
 .main-heading {
   color: var(--font-color);
   font-size: 4rem;
@@ -94,6 +96,61 @@ body {
 
 .start-btn:active {
   background-color: var(--index-btn-active);
+}
+
+
+/*********** GAME.HTML Style ************/
+.game {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.square {
+  height: 10rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bungee", sans-serif;
+  font-size: 8rem;
+  border: none;
+}
+
+.square-1 {
+  border-right: 8px solid var(--game-board);
+  border-bottom: 8px solid var(--game-board);
+}
+
+.square-2 {
+  border-right: 8px solid var(--game-board);
+  border-bottom: 8px solid var(--game-board);
+}
+
+.square-3 {
+  border-bottom: 8px solid var(--game-board);
+}
+
+.square-4 {
+  border-right: 8px solid var(--game-board);
+  border-bottom: 8px solid var(--game-board);
+}
+
+.square-5 {
+  border-bottom: 8px solid var(--game-board);
+  border-right: 8px solid var(--game-board);
+}
+
+.square-6 {
+  border-bottom: 8px solid var(--game-board);
+}
+
+.square-7 {
+  border-right: 8px solid var(--game-board);
+}
+
+.square-8 {
+  border-right: 8px solid var(--game-board);
 }
 
 /* Footer */
