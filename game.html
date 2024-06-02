@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&family=Pacifico&family=Rubik:ital,wght@0,300..900;1,300..900&family=Seymour+One&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pacifico&family=Rubik:ital,wght@0,300..900;1,300..900&family=Seymour+One&display=swap"
       rel="stylesheet"
     />
 
@@ -23,8 +23,27 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
-    <div class="scores"></div>
+    <!-- Scoreboard -->
+    <div class="scores">
+      <div class="scoreboard">
+        <div class="name">
+          <p class="player-name">Player</p>
+          <p class="player-sign">- X</p>
+        </div>
+        <div class="score" id="player-1-score">12</div>
+      </div>
+      <div class="scoreboard">
+        <div class="name">
+          <p class="player-name">Player</p>
+          <p class="player-sign">- O</p>
+        </div>
+        <div class="score" id="player-2-score">12</div>
+      </div>
+    </div>
+
+    <!-- Game Board -->
     <div class="game">
       <div class="square-1 square">x</div>
       <div class="square-2 square">x</div>
@@ -36,7 +55,10 @@
       <div class="square-8 square">x</div>
       <div class="square-9 square">x</div>
     </div>
+
+    <!-- Game Buttons -->
     <div class="buttons"></div>
+
     <footer class="footer">
       <div class="footer-text">
         <a

@@ -1,17 +1,24 @@
 :root {
+  /* colors */
   --bg-color: #344955;
-  --font-color: #FFF7FC;
+  --font-color: #deebef;
   --players: #B5C0D0;
   --index-btn-color: #E8751A;
   --index-btn-hover: #b95515;
   --index-btn-active: #ee8921;
   --game-board: #97bdc9;
+
+  /* fonts */
+  --start-btn: "Seymour One", sans-serif;
+  --player-font: "Pacifico", sans-serif;
+  --X-O: "Montserrat", sans-serif;
+  --default-font: "Rubik", sans-serif;
 }
 
 * {
   margin: 0;
   padding: 0;
-  font-family: "Rubik", sans-serif;
+  font-family: var(--default-font);
   box-sizing: border-box;
 }
 
@@ -29,7 +36,6 @@ body {
 .main-heading {
   color: var(--font-color);
   font-size: 4rem;
-  font-family: "Bungee", sans-serif;
 }
 
 .register {
@@ -66,12 +72,12 @@ body {
 .input-label {
   color: var(--players);
   font-size: 2rem;
-  font-family: "Pacifico", sans-serif;
+  font-family: var(--player-font);
 }
 
 .user-label-character {
   font-size: 2.5rem;
-  font-family: "Bungee";
+  font-family: var(--X-O);
   font-weight: bold;
 }
 
@@ -80,9 +86,9 @@ body {
   border: none;
   border-radius: .5rem;
   margin-top: 2rem;
-  font-family: "Seymour One", sans-serif;
+  font-family: var(--start-btn);
   font-size: 1.5rem;
-  background-color: #E8751A;
+  background-color: var(--index-btn-color);
   cursor: pointer;
   transition: all .15s ease-in-out;
   box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
@@ -100,6 +106,47 @@ body {
 
 
 /*********** GAME.HTML Style ************/
+/* Scoreboard */
+.scores {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.player-name {
+  font-family: var(--player-font);
+  font-size: 3rem;
+  color: var(--players);
+}
+
+.player-sign {
+  font-family: var(--X-O);
+  font-size: 4rem;
+  font-weight: 900;
+  color: var(--players);
+}
+
+.score {
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+  font-weight: 500;
+  color: var(--font-color);
+}
+
+/* Game Board */
 .game {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -112,8 +159,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: "Bungee", sans-serif;
-  font-size: 8rem;
+  font-family: var(--X-O);
+  font-size: 10rem;
   border: none;
 }
 
@@ -153,7 +200,7 @@ body {
   border-right: 8px solid var(--game-board);
 }
 
-/* Footer */
+/********* Footer *********/
 .footer {
   position: absolute;
   bottom: 0;
