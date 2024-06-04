@@ -6,7 +6,7 @@
     <!-- Title -->
     <title>Tic Tac Toe</title>
 
-    <!-- Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -26,7 +26,7 @@
   <body>
     <h1 class="main-heading">Tic Tac Toe</h1>
     <div class="register">
-      <form action="#" class="form">
+      <form class="form" onsubmit="return getPlayerNames(event)">
         <div class="player-1-input input-container">
           <input
             class="user-input"
@@ -36,8 +36,8 @@
             required
           />
           <label class="input-label" for="player-1"
-            >Player <span class="user-label-character">X</span></label
-          >
+            >Player <span class="user-label-character">X</span>
+          </label>
         </div>
         <div class="player-2-input input-container">
           <input
@@ -48,10 +48,10 @@
             required
           />
           <label class="input-label" for="player-2"
-            >Player <span class="user-label-character">O</span></label
-          >
+            >Player <span class="user-label-character">O</span>
+          </label>
         </div>
-        <button class="start-btn">Start</button>
+        <button class="start-btn" type="submit">Start</button>
       </form>
     </div>
     <footer class="footer">
@@ -66,7 +66,6 @@
         </a>
       </div>
     </footer>
-    <!-- Script -->
     <script src="script.js"></script>
   </body>
 </html>
