@@ -1,3 +1,4 @@
+// Function for player names and to proceed to game page
 function getPlayerNames(event) {
   event.preventDefault(); // Prevent form from submitting
 
@@ -17,3 +18,15 @@ function getPlayerNames(event) {
   window.location.href = "/game.html";
   return false;
 }
+
+// Score Function
+function score() {
+  document.querySelector("#player-1-score").innerHTML = 0;
+  document.querySelector("#player-2-score").innerHTML = 0;
+
+  document.querySelector(".reset-score-btn").onclick = () => {
+    document.querySelector("#player-1-score").innerHTML = 0;
+    document.querySelector("#player-2-score").innerHTML = 0;
+  };
+}
+score();
