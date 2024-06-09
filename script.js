@@ -10,6 +10,10 @@ function getPlayerNames(event) {
     return false;
   }
 
+  // Display player names on the page
+  document.querySelector('.player-1-name').textContent = player1;
+  document.querySelector('.player-2-name').textContent = player2;
+
   // Store player names in localStorage to access on game.html
   localStorage.setItem('player1', player1);
   localStorage.setItem('player2', player2);
@@ -21,12 +25,21 @@ function getPlayerNames(event) {
 
 // Score Function
 function score() {
-  document.querySelector("#player-1-score").innerHTML = 0;
-  document.querySelector("#player-2-score").innerHTML = 0;
+  const player1ScoreElement = document.querySelector("#player-1-score");
+  const player2ScoreElement = document.querySelector("#player-2-score");
+  const resetButton = document.querySelector(".reset-score-btn");
 
-  document.querySelector(".reset-score-btn").onclick = () => {
-    document.querySelector("#player-1-score").innerHTML = 0;
-    document.querySelector("#player-2-score").innerHTML = 0;
-  };
+  // Check if the elements exist before setting their values
+  if (player1ScoreElement && player2ScoreElement && resetButton) {
+    player1ScoreElement.innerHTML = 0;
+    player2ScoreElement.innerHTML = 0;
+
+    resetButton.onclick = () => {
+      player1ScoreElement.innerHTML = 0;
+      player2ScoreElement.innerHTML = 0;
+    };
+  }
 }
-score();
+
+// Call the score function on page load
+document.addEventListener("DOMContentLoaded", score);
